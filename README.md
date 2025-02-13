@@ -106,7 +106,7 @@ WHERE
 SELECT COUNT(*) AS Total_Sales FROM retail_sales;
 
 -- how many unique customers we have?
-SELECT COUNT(DISTINCT customer_id) AS total_customers FROM retail_sales;
+SELECT COUNT( DISTINCT customer_id) AS total_customers FROM retail_sales;
 
 -- unique category we have?
 SELECT DISTINCT category AS unique_category FROM retail_sales;
