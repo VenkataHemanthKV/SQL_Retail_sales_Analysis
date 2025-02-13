@@ -57,46 +57,64 @@ FROM retail_sales;
 -- Data Cleaning
 
 SELECT * FROM retail_sales
-where 
-	transactions_id is null
-    or
-    sale_date is null
-    or
-    sale_time is null
-    or
-    customer_id is null
-    or
-    gender is null
-    or
-    category is null
-    or
-    quantity is null
-    or
-    price_per_unit is null
-    or 
-    cogs is null
-    or
-    total_sale is null;
+WHERE 
+	transactions_id IS NULL
+	OR
+	sale_date IS NULL
+	OR
+	sale_time IS NULL
+	OR
+	customer_id IS NULL
+	OR
+	gender IS NULL
+	OR
+	category IS NULL
+	OR
+	quantity IS NULL
+	OR
+	price_per_unit IS NULL
+	OR 
+	cogs IS NULL
+	OR
+	total_sale IS NULL;
 
 DELETE FROM retail_sales
-WHERE 
-	transactions_id is null
-    or
-    sale_date is null
-    or
-    sale_time is null
-    or
-    customer_id is null
-    or
-    gender is null
-    or
-    category is null
-    or
-    quantity is null
-    or
-    price_per_unit is null
-    or 
-    cogs is null
-    or
-    total_sale is null;
+WHERE
+	transactions_id IS NULL
+	OR
+	sale_date IS NULL
+	OR
+	sale_time IS NULL
+	OR
+	customer_id IS NULL
+	OR
+	gender IS NULL
+	OR
+	category IS NULL
+	OR
+	quantity IS NULL
+	OR
+	price_per_unit IS NULL
+	OR 
+	cogs IS NULL
+	OR
+	total_sale IS NULL;
+
+-- Data Exploration
+
+-- How many sales we have?
+SELECT COUNT(*) AS Total_Sales FROM retail_sales;
+
+-- how many unique customers we have?
+SELECT COUNT(DISTINCT customer_id) AS total_customers FROM retail_sales;
+
+-- unique category we have?
+SELECT DISTINCT category AS unique_category FROM retail_sales;
+
 ```
+
+### 3. Data Analysis & Findings
+
+The following SQL queries were developed to answer specific business questions:
+
+1. 
