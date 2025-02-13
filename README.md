@@ -20,7 +20,7 @@ The project involves setting up a retail sales database, performing exploratory 
 - **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 
-'''sql
+```sql
 CREATE DATABASE sql_project;
 
 CREATE TABLE retail_sales
@@ -37,7 +37,7 @@ CREATE TABLE retail_sales
     cogs FLOAT NOT NULL,
     total_sale FLOAT NOT NULL
 );
-'''
+```
 
 ### 2. Data Exploration & Cleaning
 
@@ -46,5 +46,57 @@ CREATE TABLE retail_sales
 - **Category Count**: Identify all unique product categories in the dataset.
 - **Null Value Check**: Check for any null values in the dataset and delete records with missing data.
 
-'''sql
+```sql
+SELECT * FROM retail_sales
+limit 100;
 
+SELECT 
+	count(*) 
+FROM retail_sales;
+
+-- Data Cleaning
+
+SELECT * FROM retail_sales
+where 
+	transactions_id is null
+    or
+    sale_date is null
+    or
+    sale_time is null
+    or
+    customer_id is null
+    or
+    gender is null
+    or
+    category is null
+    or
+    quantity is null
+    or
+    price_per_unit is null
+    or 
+    cogs is null
+    or
+    total_sale is null;
+
+DELETE FROM retail_sales
+WHERE 
+	transactions_id is null
+    or
+    sale_date is null
+    or
+    sale_time is null
+    or
+    customer_id is null
+    or
+    gender is null
+    or
+    category is null
+    or
+    quantity is null
+    or
+    price_per_unit is null
+    or 
+    cogs is null
+    or
+    total_sale is null;
+```
