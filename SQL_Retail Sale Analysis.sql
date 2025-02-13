@@ -1,3 +1,23 @@
+-- Creating Retail Sales Analysis DataBase
+CREATE DATABASE sql_project;
+
+-- Create TABLE
+DROP TABLE IF EXISTS retail sales analysis;
+CREATE TABLE retail sales analysis
+            (
+                transaction_id INT PRIMARY KEY NOT NULL,	
+                sale_date DATE NOT NULL,	 
+                sale_time TIME NOT NULL,	
+                customer_id INT NOT NULL,
+                gender	VARCHAR(45) NOT NULL,
+                age INT NOT NULL,
+                category VARCHAR(45) NOT NULL,	
+                quantity INT NOT NULL,
+                price_per_unit FLOAT NOT NULL,	
+                cogs FLOAT NOT NULL,
+                total_sale FLOAT NOT NULL
+            );
+
 SELECT * FROM sql_project.`retail sales analysis`
 limit 100;
 SELECT 
